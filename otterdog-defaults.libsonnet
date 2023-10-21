@@ -103,7 +103,7 @@ local newBranchProtectionRule(pattern) = {
   blocks_creations: false,
   push_restrictions: [],
   required_status_checks: [
-    # by default, the eclipse contributor agreement check must pass.
+    # By default, the eclipse contributor agreement check must pass.
     "eclipse-eca-validation:eclipsefdn/eca",
   ],
   requires_pull_request: true,
@@ -179,7 +179,7 @@ local newOrg(id) = {
     has_organization_projects: true,
     has_repository_projects: true,
 
-    # Base permissions to the organization’s repositories apply to all members and excludes outside collaborators.
+    # Base permissions to the organization’s repositories apply to all members and exclude outside collaborators.
     # Since organization members can have permissions from multiple sources, members and collaborators who have been
     # granted a higher level of access than the base permissions will retain their higher permission privileges.
     # Can be one of: read, write, admin, none
@@ -305,7 +305,7 @@ local newOrg(id) = {
   ],
 
   # Merges configuration settings for repositories defined in _repositories
-  # using the name of the repo as key. The result is unique array of repository
+  # using the name of the repo as key. The result is a unique array of repository
   # configurations.
   repositories: otterdog.mergeByKey(self._repositories, "name"),
 };
